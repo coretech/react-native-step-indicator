@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import { AppRegistry,StyleSheet,View, Text } from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import ViewPager from 'react-native-viewpager';
 import StepIndicator from 'react-native-step-indicator';
+
 const PAGES = ['Page 1','Page 2','Page 3','Page 4','Page 5'];
 
 const firstIndicatorStyles = {
@@ -108,7 +109,7 @@ export default class App extends Component {
 
   renderViewPagerPage = (data) => {
     return(<View style={styles.page}>
-      <Text>{data}</Text>
+      <Text allowFontScaling={false}>{data}</Text>
     </View>)
   }
 }
