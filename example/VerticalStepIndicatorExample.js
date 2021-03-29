@@ -60,8 +60,8 @@ export default class VerticalStepIndicator extends Component {
   renderPage = (rowData) => {
     return (
       <View style={styles.rowItem}>
-        <Text style={styles.title}>{rowData.title}</Text>
-        <Text style={styles.body}>{rowData.body}</Text>
+        <Text allowFontScaling={false} style={styles.title}>{rowData.title}</Text>
+        <Text allowFontScaling={false} style={styles.body}>{rowData.body}</Text>
       </View>
     )
   }

@@ -169,7 +169,7 @@ export default class StepIndicator extends PureComponent {
         return (
           <TouchableWithoutFeedback style={[styles.stepLabelItem, this.props.stepLabelItemCustomStyles]} key={index} onPress={() => this.stepPressed(index)}>
             <View style={[styles.stepLabelItem, this.props.stepLabelItemCustomStyles]}>
-              <Text style={[styles.stepLabel,selectedStepLabelStyle , { fontSize: this.customStyles.labelSize }]}>
+              <Text allowFontScaling={false} style={[styles.stepLabel,selectedStepLabelStyle , { fontSize: this.customStyles.labelSize }]}>
                 {label}
               </Text>
               {this.props.renderSubLabel && this.props.renderSubLabel(index)}
@@ -237,7 +237,7 @@ export default class StepIndicator extends PureComponent {
           this.props.renderCustomIndicator(position)
           :
           <Animated.View key={'step-indicator'} removeClippedSubviews style={[styles.step , stepStyle ]}>
-            <Text style={indicatorLabelStyle}>{ position + 1 }</Text>
+            <Text allowFontScaling={false} style={indicatorLabelStyle}>{ position + 1 }</Text>
           </Animated.View>
       );
     }
